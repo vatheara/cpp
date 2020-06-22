@@ -29,29 +29,36 @@ class Messeger
       }
       void showUser()
       {
+          cout << n <<endl;
             for(int i =0 ;i<n;i++)
             {
                cout << "User[" << i+1 << "] " << "Name:";
                cout << user[i].name << endl;
             }
             cout << "Press any to continue!" << endl;
+            int tmp;
+            cin >> tmp;
+            menu();
       }
 };
+//should not declare object in loop function or recursive
+Messeger user;
 
 void menu()
 {
 
      int x;
 
-    Messeger user;
     system("clear");
     cout << "1.Register" << endl;
     cout << "2.Show all users" << endl;
     cout << "3.See the conversations" << endl;
     cout << ":";cin >> x;
-    switch(x){
-        case 1:user.Register();menu();
-        case 2:user.showUser();
+    switch(x)
+    {
+        //use break to prevent recursive
+        case 1:user.Register();menu();break;
+        case 2:user.showUser();break;
         case 0:break;
         default:menu();
     }
