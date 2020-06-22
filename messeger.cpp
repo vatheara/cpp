@@ -42,7 +42,7 @@ class Messeger
 void menu()
 {
 
- LOOP:   int x;
+     int x;
 
     Messeger user;
     system("clear");
@@ -52,7 +52,7 @@ void menu()
     cout << ":";cin >> x;
     switch(x){
         case 1:user.Register();menu();
-        case 2:user.showUser();goto LOOP;
+        case 2:user.showUser();
         case 0:break;
         default:menu();
     }
