@@ -18,7 +18,7 @@ class Messeger
 
       void Register()
       {
-           cout << "Input Use::" ;
+           cout << "Input User" ;
            cin >> n;
            user = new User[n];
            for(size_t i =0 ;i<n;i++)
