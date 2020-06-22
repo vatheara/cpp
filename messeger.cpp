@@ -25,8 +25,6 @@ class Messeger
                cout << "User["<<i+1<<"] "<<"Name:";
                cin >> user[i].name;
            }
-         //cout << "User Name:";
-         //cin >> A.name[];
       }
       void showUser()
       {
@@ -52,7 +50,7 @@ void menu()
     cout << ":";cin >> x;
     switch(x){
         case 1:user.Register();menu();
-        case 2:user.showUser();
+        case 2:user.showUser();break;menu();
         case 0:break;
         default:menu();
     }
